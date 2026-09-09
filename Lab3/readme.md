@@ -44,7 +44,7 @@ Note: -D flag will install this package as developer dependency
 -404->not found
 -500->internal server error
 
-## Content Tyoe 
+## Content Type
 
 -text/plian
 -text/html
@@ -56,3 +56,33 @@ the content type and status code can be send back to client by two ways
 1. res.writeHead
 2. res.setHeader
 3. res.statusCode
+
+
+
+## Response as html content
+
+1. res.end
+   > - end("any html contest/tag")
+2. html file
+   > - read by createreadstream
+   > - pipe with res object
+
+3. html content
+    send any htmml tags/content by using
+    res.end('<any html tag>')
+
+## JSON
+
+> - server return data only not html content because html content will be retain by content devloper. the data is in json format 
+> - json always stores data in key vslue pair in key value pair enclosed bhy {} braket aaray csn be stored by []baraket one pair of
+> - curly braket will represent one object and its property will be seprated by , 
+
+'''
+{
+  id:1,
+  name:'mobile',
+  price:25000,
+  rating:4.5,
+  review:200
+}
+'''
