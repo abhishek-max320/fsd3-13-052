@@ -97,4 +97,13 @@ the content type and status code can be send back to client by two ways
  6 . application/auth -->
  the header can be set by res object at server side by two way
 
-7 . 
+
+
+## get->
+ no parameter will pass through the server when we recieve all items
+## post->
+add record the pass the value from body section in json format of api testure
+## delete ->
+To delete any product we pass parameter that is id of the product from url
+## put->
+we pass id from url and data update from 
