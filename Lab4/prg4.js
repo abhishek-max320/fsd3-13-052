@@ -16,6 +16,16 @@ app.get("/api/products", (req, res) => {
     res.status(200).json({count:modiProducts.length,data:products})
 });
 
+app.get("/api/products/:id", (req, res) => {
+    const { id } = req.params;
+    const p = products.find((item) => item.id === Number(id));
+    if (p)
+        res.status(200).json({ status: true, data: p });
+    else
+        res
+            .status(404)
+            .json({ status: false, msg: `product not found with id:${id}` });
+});
 app.use((req, res) => {
     res.status(404).send("route is found");
 });
